@@ -14,35 +14,14 @@ This project aims to explore and analyze the oldest continuously operating busin
 <h2>Table of Contents</h2>
 <ol>
     <li><a href="#introduction">Introduction</a></li>
-    <li><a href="#installation">Installation</a></li>
     <li><a href="#usage">Usage</a></li>
     <li><a href="#notebook-overview">Notebook Overview</a></li>
     <li><a href="#dependencies">Dependencies</a></li>
     <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
-    <li><a href="#acknowledgements">Acknowledgements</a></li>
 </ol>
 
 <h2 id="introduction">Introduction</h2>
 <p>This project involves a detailed analysis of the world's oldest businesses, their historical significance, and their distribution across various countries and continents. Using SQL queries and visualizations, the notebook uncovers interesting insights about these businesses.</p>
-
-<h2 id="installation">Installation</h2>
-<p><strong>Instructions to set up the project locally:</strong></p>
-<ol>
-    <li>Clone the repository:
-        <pre><code>git clone https://github.com/your_username/your_repository.git</code></pre>
-    </li>
-    <li>Navigate to the project directory:
-        <pre><code>cd your_repository</code></pre>
-    </li>
-    <li>Create and activate a virtual environment:
-        <pre><code>python3 -m venv venv<br>
-        source venv/bin/activate   # On Windows, use `venv\Scripts\activate`</code></pre>
-    </li>
-    <li>Install the required dependencies:
-        <pre><code>pip install -r requirements.txt</code></pre>
-    </li>
-</ol>
 
 <h2 id="usage">Usage</h2>
 <p><strong>Guidelines to use or run the notebook:</strong></p>
@@ -148,18 +127,6 @@ LIMIT 10;</code></pre>
     <li>Push to the branch (<code>git push origin feature/your_feature</code>).</li>
     <li>Open a pull request.</li>
 </ol>
-
-<h2 id="license">License</h2>
-<p><strong>Information about the project's license:</strong><br>
-This project is licensed under the MIT License - see the <a href="LICENSE">LICENSE</a> file for details.</p>
-
-<h2 id="acknowledgements">Acknowledgements</h2>
-<p><strong>Credits and acknowledgments for the project:</strong></p>
-<ul>
-    <li>[Contributor Name 1]</li>
-    <li>[Contributor Name 2]</li>
-    <li><a href="https://www.datacamp.com/">DataCamp</a></li>
-</ul>
 
 </body>
 </html>
