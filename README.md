@@ -1,91 +1,119 @@
-What and Where are the World's Oldest Businesses
-Brief Description:
-This project aims to explore and analyze the oldest continuously operating businesses in the world, their founding years, categories, and geographical distribution.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What and Where are the World's Oldest Businesses</title>
+</head>
+<body>
 
-Table of Contents
-Introduction
-Installation
-Usage
-Notebook Overview
-Dependencies
-Contributing
-License
-Acknowledgements
-Introduction
-This project involves a detailed analysis of the world's oldest businesses, their historical significance, and their distribution across various countries and continents. Using SQL queries and visualizations, the notebook uncovers interesting insights about these businesses.
+<h1>What and Where are the World's Oldest Businesses</h1>
 
-Installation
-Instructions to set up the project locally:
+<p><strong>Brief Description:</strong><br>
+This project aims to explore and analyze the oldest continuously operating businesses in the world, their founding years, categories, and geographical distribution.</p>
 
-Clone the repository:
-bash
-Copy code
-git clone https://github.com/your_username/your_repository.git
-Navigate to the project directory:
-bash
-Copy code
-cd your_repository
-Create and activate a virtual environment:
-bash
-Copy code
-python3 -m venv venv
-source venv/bin/activate   # On Windows, use `venv\Scripts\activate`
-Install the required dependencies:
-bash
-Copy code
-pip install -r requirements.txt
-Usage
-Guidelines to use or run the notebook:
+<h2>Table of Contents</h2>
+<ol>
+    <li><a href="#introduction">Introduction</a></li>
+    <li><a href="#installation">Installation</a></li>
+    <li><a href="#usage">Usage</a></li>
+    <li><a href="#notebook-overview">Notebook Overview</a></li>
+    <li><a href="#dependencies">Dependencies</a></li>
+    <li><a href="#contributing">Contributing</a></li>
+    <li><a href="#license">License</a></li>
+    <li><a href="#acknowledgements">Acknowledgements</a></li>
+</ol>
 
-Open the Jupyter notebook:
-bash
-Copy code
-jupyter notebook "What and Where are the World's Oldest Businesses.ipynb"
-Run the cells sequentially to reproduce the analysis and results.
-Notebook Overview
-Summary of the notebook structure and contents:
+<h2 id="introduction">Introduction</h2>
+<p>This project involves a detailed analysis of the world's oldest businesses, their historical significance, and their distribution across various countries and continents. Using SQL queries and visualizations, the notebook uncovers interesting insights about these businesses.</p>
 
-Cell Types and Count
-Total Cells: 18
-Cell Types:
-Markdown: 9
-Code: 9
-Sections
-Introduction and Objectives
-Description and goals of the analysis.
-Data Loading and Preprocessing
-Steps to load and clean the data.
-Example query:
-sql
-Copy code
-%%sql 
+<h2 id="installation">Installation</h2>
+<p><strong>Instructions to set up the project locally:</strong></p>
+<ol>
+    <li>Clone the repository:
+        <pre><code>git clone https://github.com/your_username/your_repository.git</code></pre>
+    </li>
+    <li>Navigate to the project directory:
+        <pre><code>cd your_repository</code></pre>
+    </li>
+    <li>Create and activate a virtual environment:
+        <pre><code>python3 -m venv venv<br>
+        source venv/bin/activate   # On Windows, use `venv\Scripts\activate`</code></pre>
+    </li>
+    <li>Install the required dependencies:
+        <pre><code>pip install -r requirements.txt</code></pre>
+    </li>
+</ol>
+
+<h2 id="usage">Usage</h2>
+<p><strong>Guidelines to use or run the notebook:</strong></p>
+<ol>
+    <li>Open the Jupyter notebook:
+        <pre><code>jupyter notebook "What and Where are the World's Oldest Businesses.ipynb"</code></pre>
+    </li>
+    <li>Run the cells sequentially to reproduce the analysis and results.</li>
+</ol>
+
+<h2 id="notebook-overview">Notebook Overview</h2>
+<p><strong>Summary of the notebook structure and contents:</strong></p>
+
+<h3>Cell Types and Count</h3>
+<ul>
+    <li><strong>Total Cells:</strong> 18</li>
+    <li><strong>Cell Types:</strong>
+        <ul>
+            <li>Markdown: 9</li>
+            <li>Code: 9</li>
+        </ul>
+    </li>
+</ul>
+
+<h3>Sections</h3>
+<ol>
+    <li><strong>Introduction and Objectives</strong>
+        <ul>
+            <li>Description and goals of the analysis.</li>
+        </ul>
+    </li>
+    <li><strong>Data Loading and Preprocessing</strong>
+        <ul>
+            <li>Steps to load and clean the data.</li>
+            <li>Example query:
+                <pre><code>%%sql 
 postgresql:///oldestbusinesses
 
 -- Select the oldest and newest founding years from the businesses table
 SELECT 
     MIN(founding_year) AS oldest,
     MAX(founding_year) AS newest
-FROM businesses;
-Exploratory Data Analysis (EDA)
-Visualizations and initial analysis of the data.
-Oldest Business Analysis
-Count and details of businesses founded before 1000 AD.
-Example query:
-sql
-Copy code
-%%sql
+FROM businesses;</code></pre>
+            </li>
+        </ul>
+    </li>
+    <li><strong>Exploratory Data Analysis (EDA)</strong>
+        <ul>
+            <li>Visualizations and initial analysis of the data.</li>
+        </ul>
+    </li>
+    <li><strong>Oldest Business Analysis</strong>
+        <ul>
+            <li>Count and details of businesses founded before 1000 AD.</li>
+            <li>Example query:
+                <pre><code>%%sql
 
 -- Get the count of rows in businesses where the founding year was before 1000
 SELECT 
     COUNT(*) 
 FROM businesses
-WHERE founding_year < 1000;
-Category Analysis
-Analysis of business categories and their distribution across continents.
-Example query:
-sql
-Copy code
-%%sql
+WHERE founding_year &lt; 1000;</code></pre>
+            </li>
+        </ul>
+    </li>
+    <li><strong>Category Analysis</strong>
+        <ul>
+            <li>Analysis of business categories and their distribution across continents.</li>
+            <li>Example query:
+                <pre><code>%%sql
 
 -- Select the category and count of category (as "n")
 -- arranged by descending count, limited to top 10
@@ -95,13 +123,44 @@ SELECT
 FROM businesses 
 GROUP BY category 
 ORDER BY n DESC 
-LIMIT 10;
-Dependencies
-List of major libraries and dependencies used in the notebook:
+LIMIT 10;</code></pre>
+            </li>
+        </ul>
+    </li>
+</ol>
 
-Python 3.6.7
-Jupyter Notebook
-SQLAlchemy
-Pandas
-Matplotlib
-Postgresql
+<h2 id="dependencies">Dependencies</h2>
+<p><strong>List of major libraries and dependencies used in the notebook:</strong></p>
+<ul>
+    <li>Python 3.6.7</li>
+    <li>Jupyter Notebook</li>
+    <li>SQLAlchemy</li>
+    <li>Pandas</li>
+    <li>Matplotlib</li>
+    <li>Postgresql</li>
+</ul>
+
+<h2 id="contributing">Contributing</h2>
+<p><strong>Instructions for contributing to the project:</strong></p>
+<ol>
+    <li>Fork the repository.</li>
+    <li>Create a new branch (<code>git checkout -b feature/your_feature</code>).</li>
+    <li>Commit your changes (<code>git commit -m 'Add your feature'</code>).</li>
+    <li>Push to the branch (<code>git push origin feature/your_feature</code>).</li>
+    <li>Open a pull request.</li>
+</ol>
+
+<h2 id="license">License</h2>
+<p><strong>Information about the project's license:</strong><br>
+This project is licensed under the MIT License - see the <a href="LICENSE">LICENSE</a> file for details.</p>
+
+<h2 id="acknowledgements">Acknowledgements</h2>
+<p><strong>Credits and acknowledgments for the project:</strong></p>
+<ul>
+    <li>[Contributor Name 1]</li>
+    <li>[Contributor Name 2]</li>
+    <li><a href="https://www.datacamp.com/">DataCamp</a></li>
+</ul>
+
+</body>
+</html>
